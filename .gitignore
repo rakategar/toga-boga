@@ -1,0 +1,10 @@
+.env*
+.vercel
+node_modules
+*.zip
+*.pdf
+.claude
+avatar koki*.png
+Logo Siluet*.png
+contoh font*.png
+refrensi*.png

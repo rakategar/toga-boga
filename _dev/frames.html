@@ -1,0 +1,8 @@
+<!doctype html><meta charset="utf-8"><style>body{margin:0;display:flex;flex-wrap:wrap;background:#888;width:100vw}iframe{border:0;display:block}</style>
+<body><script>
+const q=new URLSearchParams(location.search);const w=q.get('w')||1366,h=q.get('h')||820;
+(q.get('a')||'beranda').split(',').forEach(a=>{const f=document.createElement('iframe');f.width=w;f.height=h;f.src='/';
+f.onload=()=>{const d=f.contentDocument;const s=d.createElement('style');s.textContent='.reveal{opacity:1!important;transform:none!important;transition:none!important}html{scroll-behavior:auto!important}.nav{display:'+(a==='beranda'?'block':'none')+'}';d.head.appendChild(s);
+d.querySelectorAll('img[loading=lazy]').forEach(i=>i.loading='eager');setTimeout(()=>{const t=d.getElementById(a);if(t)f.contentWindow.scrollTo(0,t.getBoundingClientRect().top+f.contentWindow.scrollY)},800)};
+document.body.appendChild(f)});
+</script>

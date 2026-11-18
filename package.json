@@ -1,0 +1,9 @@
+{
+  "name": "toga-boga",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node _dev/server.mjs"
+  },
+  "engines": { "node": ">=20" }
+}

@@ -1,0 +1,489 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Toga Boga Catering — Healthy and Tasty | Katering Sehat Probolinggo</title>
+  <meta name="description" content="Toga Boga Catering, Kota Probolinggo sejak 2015. Dikelola ahli gizi Dhaniar Mudita, S.Gz., M.P. Katering diet & non-diet, tumpeng, frozen food, kue kering, PMT, cooking class, dan pelatihan pengolahan makanan.">
+  <meta name="theme-color" content="#0A2A1F">
+  <link rel="canonical" href="https://toga-boga.vercel.app/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Toga Boga Catering — Healthy and Tasty">
+  <meta property="og:description" content="Katering sehat dikelola ahli gizi di Kota Probolinggo sejak 2015. Pesan mudah lewat WhatsApp.">
+  <meta property="og:image" content="/src/img/produk/tumpeng-nasi.webp">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" type="image/png" sizes="48x48" href="/src/icons/favicon-48.png">
+  <link rel="apple-touch-icon" href="/src/icons/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Toga Boga">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Risque&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/css/style.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FoodEstablishment","name":"Toga Boga Catering","slogan":"Healthy and Tasty","foundingDate":"2015","founder":{"@type":"Person","name":"Dhaniar Mudita, S.Gz., M.P."},"telephone":"+6285236064585","servesCuisine":"Indonesian","address":{"@type":"PostalAddress","streetAddress":"Jl. Krajan Baru, Ketapang, Kec. Kademangan","addressLocality":"Kota Probolinggo","addressRegion":"Jawa Timur","postalCode":"67222","addressCountry":"ID"},"sameAs":["https://instagram.com/toga.boga"]}
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="skip">Lewati ke konten</a>
+
+  <!-- ============ HEADER ============ -->
+  <header class="nav" id="nav">
+    <div class="nav__pill">
+      <a href="#beranda" class="brand" aria-label="Toga Boga — kembali ke atas" data-i18n-attr="aria-label:brand.top">
+        <img src="/src/img/brand/logo-yellow.png" alt="" width="40" height="35">
+        <span class="wordmark">T<u>o</u>g<u>a</u> B<u>o</u>g<u>a</u></span>
+      </a>
+      <nav class="nav__links" aria-label="Navigasi utama" data-i18n-attr="aria-label:nav.label">
+        <a href="#tentang" data-i18n="nav.about">Tentang</a>
+        <a href="#layanan" data-i18n="nav.services">Layanan</a>
+        <a href="#frozen">Frozen Food</a>
+        <a href="#kue" data-i18n="nav.cookies">Kue Kering</a>
+        <a href="#galeri" data-i18n="nav.gallery">Galeri</a>
+        <a href="#kontak" data-i18n="nav.contact">Kontak</a>
+      </nav>
+      <div class="nav__actions">
+        <button class="lang-toggle" id="langToggle" type="button" aria-label="Ganti bahasa / Switch language"><span data-l="id">ID</span><span data-l="en">EN</span></button>
+        <button class="btn-install" id="installBtn" hidden aria-label="Pasang aplikasi Toga Boga" data-i18n-attr="aria-label:install.aria">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0-4-4m4 4 4-4M5 21h14"/></svg><span data-i18n="install">Pasang App</span>
+        </button>
+        <a class="btn btn--yellow btn--sm nav__cta" data-wa="Halo Toga Boga, saya ingin bertanya/pesan." data-i18n="nav.cta" data-i18n-attr="data-wa:wa.ask" href="#">Pesan via WA</a>
+        <button class="burger" id="burger" aria-label="Buka menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span></button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu" hidden>
+      <a href="#tentang" data-i18n="mm.about">Tentang Kami</a>
+      <a href="#layanan" data-i18n="mm.services">Layanan & Produk</a>
+      <a href="#frozen">Frozen Food</a>
+      <a href="#kue" data-i18n="mm.cookies">Kue Kering 2026</a>
+      <a href="#galeri" data-i18n="mm.gallery">Galeri Kegiatan</a>
+      <a href="#cara-pesan" data-i18n="mm.how">Cara Pesan</a>
+      <a href="#kontak" data-i18n="mm.contact">Kontak & Lokasi</a>
+      <a class="btn btn--yellow" data-wa="Halo Toga Boga, saya ingin bertanya/pesan." data-i18n="mm.cta" data-i18n-attr="data-wa:wa.ask" href="#">Pesan via WhatsApp</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="beranda">
+      <svg class="hero__paths" viewBox="0 0 1440 820" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M-20 160 C 260 120, 330 320, 560 300 S 900 80, 1120 170 S 1380 330, 1470 260"/>
+        <path d="M-20 640 C 220 700, 380 520, 620 600 S 980 760, 1200 640 S 1400 560, 1470 620"/>
+      </svg>
+      <div class="leaf leaf--1" aria-hidden="true"></div>
+      <div class="leaf leaf--2" aria-hidden="true"></div>
+      <div class="leaf leaf--3" aria-hidden="true"></div>
+      <div class="leaf leaf--4" aria-hidden="true"></div>
+
+      <div class="plate plate--1" data-depth="18"><img src="/src/img/produk/tumpeng-crop.webp" alt="Tumpeng nasi Toga Boga" width="300" height="300"></div>
+      <div class="plate plate--2" data-depth="-14"><img src="/src/img/produk/kaki-naga-crop.webp" alt="Frozen food kaki naga" width="300" height="300"></div>
+      <div class="plate plate--3" data-depth="12"><img src="/src/img/produk/diet-dash-crop.webp" alt="Menu katering diet" width="300" height="300"></div>
+      <div class="plate plate--4" data-depth="-20"><img src="/src/img/produk/kue-crop.webp" alt="Kue kering Toga Boga" width="300" height="300"></div>
+
+      <div class="hero__inner">
+        <p class="eyebrow reveal" data-i18n="hero.eyebrow"><span class="dot"></span> Dikelola Ahli Gizi · Probolinggo sejak 2015</p>
+        <h1 class="hero__title reveal">
+          <span class="hero__brand">Toga Boga Catering</span>
+          <span class="line">Healthy <em>and</em></span>
+          <span class="line"><span class="swash">Tasty</span></span>
+        </h1>
+        <p class="hero__lead reveal" data-i18n="hero.lead">Katering sehat dengan gizi terukur dan bahan pangan lokal — sebagian dipetik langsung dari kebun kami sendiri, lalu diolah jadi hidangan yang lezat untuk setiap momen.</p>
+        <div class="hero__cta reveal">
+          <a class="btn btn--green btn--lg" data-wa="Halo Toga Boga, saya ingin konsultasi menu." data-i18n-attr="data-wa:wa.consult" href="#">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 3.5A11 11 0 0 0 3.2 17.3L2 22l4.8-1.2A11 11 0 1 0 20.5 3.5Zm-8.4 17a9 9 0 0 1-4.6-1.3l-.3-.2-2.9.8.8-2.8-.2-.3a9 9 0 1 1 7.2 3.8Zm5-6.7c-.3-.1-1.6-.8-1.9-.9-.3-.1-.4-.1-.6.1l-.9 1.1c-.2.2-.3.2-.6.1a7.4 7.4 0 0 1-3.6-3.2c-.3-.5.3-.4.8-1.4.1-.2 0-.3 0-.5l-.9-2c-.2-.6-.5-.5-.6-.5h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7.5-.1 1.6-.7 1.9-1.3.2-.6.2-1.2.2-1.3-.1-.1-.3-.2-.6-.3Z"/></svg>
+            <span data-i18n="hero.cta1">Konsultasi Gratis</span>
+          </a>
+          <a class="btn btn--ghost btn--lg" href="#layanan" data-i18n="hero.cta2">Lihat Menu</a>
+        </div>
+        <ul class="hero__trust reveal" aria-label="Keunggulan" data-i18n="hero.trust" data-i18n-attr="aria-label:hero.trustLabel">
+          <li><b>10+</b> tahun melayani</li>
+          <li><b>S.Gz., M.P.</b> ahli gizi</li>
+          <li><b>Kebun</b> sendiri</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ MARQUEE ============ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track" data-i18n="marquee">
+        <span>Katering Diet</span><i>✦</i><span>Tumpeng Nasi & Puding</span><i>✦</i><span>Frozen Food</span><i>✦</i><span>Kue Kering & Hampers</span><i>✦</i><span>PMT Bumil & Balita</span><i>✦</i><span>Cooking Class Anak</span><i>✦</i><span>Pelatihan Olahan Pangan</span><i>✦</i><span>Konsultasi Menu Diet</span><i>✦</i>
+        <span>Katering Diet</span><i>✦</i><span>Tumpeng Nasi & Puding</span><i>✦</i><span>Frozen Food</span><i>✦</i><span>Kue Kering & Hampers</span><i>✦</i><span>PMT Bumil & Balita</span><i>✦</i><span>Cooking Class Anak</span><i>✦</i><span>Pelatihan Olahan Pangan</span><i>✦</i><span>Konsultasi Menu Diet</span><i>✦</i>
+      </div>
+    </div>
+
+    <!-- ============ TENTANG ============ -->
+    <section class="section about" id="tentang">
+      <div class="container about__grid">
+        <div class="about__visual reveal">
+          <div class="arch">
+            <img src="/src/img/brand/dhaniar-foto.webp" alt="Dhaniar Mudita, S.Gz., M.P., pendiri Toga Boga Catering" data-i18n-attr="alt:about.photoAlt" width="400" height="760" loading="lazy">
+          </div>
+          <img class="about__chef" src="/src/img/brand/chef-dhaniar.webp" alt="" width="360" height="360" loading="lazy">
+          <div class="about__tag">
+            <span class="about__tag-k" data-i18n="about.tag">Pendiri & Ahli Gizi</span>
+            <span class="about__tag-n">Dhaniar Mudita</span>
+            <span class="about__tag-s">S.Gz., M.P.</span>
+          </div>
+          <div class="sticker" aria-hidden="true"><span data-i18n="about.since">sejak</span><b>2015</b></div>
+        </div>
+        <div class="about__copy">
+          <p class="kicker reveal" data-i18n="about.kicker">Tentang Kami</p>
+          <h2 class="h2 reveal" data-i18n="about.h2">Dari kebun sendiri, <em>diracik</em> oleh ahli gizi.</h2>
+          <p class="reveal" data-i18n="about.p1">Toga Boga Catering berada di Kota Probolinggo sejak 2015 dan dikelola oleh ahli gizi, <strong>Dhaniar Mudita, S.Gz., M.P.</strong> Kami menghadirkan beragam layanan mulai dari katering diet dan non-diet, makanan institusi, frozen food, hingga cooking class dan pelatihan pengolahan makanan/minuman.</p>
+          <p class="reveal" data-i18n="about.p2">Dengan mengutamakan kualitas gizi serta pemanfaatan pangan lokal, Toga Boga menghadirkan pengalaman istimewa melalui kegiatan memetik bahan pangan langsung dari kebun sendiri untuk diolah menjadi hidangan.</p>
+          <blockquote class="owner-quote reveal">
+            <p data-i18n="about.quote">Dengan latar belakang pendidikan di bidang gizi, beliau mengembangkan usaha jasa boga yang mengutamakan kualitas gizi, keberagaman produk, serta pemanfaatan pangan lokal dengan konsep baru — <em>berkebun</em>.</p>
+            <footer data-i18n="about.quoteBy">Profil singkat Dhaniar Mudita, S.Gz., M.P. — pendiri & pemilik</footer>
+          </blockquote>
+          <dl class="stats reveal">
+            <div><dt><span data-count="10">0</span>+</dt><dd data-i18n="about.s1">Tahun melayani Probolinggo</dd></div>
+            <div><dt><span data-count="16">0</span>+</dt><dd data-i18n="about.s2">Varian frozen food</dd></div>
+            <div><dt><span data-count="9">0</span></dt><dd data-i18n="about.s3">Jenis layanan</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ NILAI ============ -->
+    <section class="section values">
+      <div class="container">
+        <div class="section-head center">
+          <p class="kicker reveal" data-i18n="val.kicker">Kenapa Toga Boga?</p>
+          <h2 class="h2 reveal" data-i18n="val.h2">Sehat itu <em>bisa</em> lezat.</h2>
+          <p class="section-sub reveal" data-i18n="val.sub">Tiga hal yang kami jaga di setiap hidangan.</p>
+        </div>
+        <div class="values__grid">
+          <article class="vcard reveal tilt">
+            <div class="vcard__icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="22"/><path d="M32 10v44M10 32h44" opacity=".35"/><path d="M32 32 47 17"/></svg>
+            </div>
+            <h3 data-i18n="val.t1">Gizi Terukur</h3>
+            <p data-i18n="val.p1">Setiap menu dirancang oleh ahli gizi — dari katering diet DASH hingga makanan pasien rawat inap dan PMT ibu hamil & balita.</p>
+          </article>
+          <article class="vcard reveal tilt">
+            <div class="vcard__icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64"><path d="M32 54V26"/><path d="M32 34c-12 0-18-8-18-18 12 0 18 8 18 18Z"/><path d="M32 28c0-10 6-16 18-16 0 10-6 16-18 16Z"/><path d="M14 54h36"/></svg>
+            </div>
+            <h3 data-i18n="val.t2">Pangan Lokal, dari Kebun</h3>
+            <p data-i18n="val.p2">Bahan pangan lokal diutamakan, sebagian dipetik langsung dari kebun Toga Boga untuk diolah menjadi hidangan segar.</p>
+          </article>
+          <article class="vcard reveal tilt">
+            <div class="vcard__icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64"><rect x="10" y="22" width="44" height="30" rx="6"/><path d="M10 34h44M24 22v-6a8 8 0 0 1 16 0v6"/></svg>
+            </div>
+            <h3 data-i18n="val.t3">Ragam Produk</h3>
+            <p data-i18n="val.p3">Katering harian, tumpeng untuk acara, frozen food praktis, kue kering & hampers, sampai kelas memasak dan pelatihan usaha.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ LAYANAN ============ -->
+    <section class="section services" id="layanan">
+      <div class="container">
+        <div class="section-head split">
+          <div>
+            <p class="kicker reveal" data-i18n="svc.kicker">Layanan & Produk</p>
+            <h2 class="h2 reveal" data-i18n="svc.h2">Pilih yang kamu <em>butuhkan</em>.</h2>
+          </div>
+          <p class="section-sub reveal" data-i18n="svc.sub">Klik kartu untuk melihat detail & foto. Semua pemesanan dan konsultasi langsung terhubung ke WhatsApp kami.</p>
+        </div>
+        <div class="chips reveal" role="tablist" aria-label="Filter layanan" id="svcFilter">
+          <button class="chip is-active" data-f="all" role="tab" aria-selected="true" data-i18n="svc.all">Semua</button>
+          <button class="chip" data-f="makan" role="tab" aria-selected="false" data-i18n="svc.catering">Katering</button>
+          <button class="chip" data-f="produk" role="tab" aria-selected="false" data-i18n="svc.products">Produk</button>
+          <button class="chip" data-f="edukasi" role="tab" aria-selected="false" data-i18n="svc.edu">Kelas & Edukasi</button>
+        </div>
+        <div class="svc-grid" id="svcGrid"><!-- rendered by main.js --></div>
+      </div>
+    </section>
+
+    <!-- ============ FROZEN FOOD ============ -->
+    <section class="section frozen" id="frozen">
+      <div class="container">
+        <div class="section-head split">
+          <div>
+            <p class="kicker kicker--light reveal">Frozen Food</p>
+            <h2 class="h2 h2--light reveal" data-i18n="ff.h2">Stok sehat di freezer, <em>semua Rp30.000</em>.</h2>
+          </div>
+          <p class="section-sub section-sub--light reveal" data-i18n="ff.sub">Praktis tinggal goreng, kukus, atau panggang. Juga tersedia dumpling dan galantin — tanyakan stok terbaru lewat WhatsApp.</p>
+        </div>
+      </div>
+      <div class="ff-scroller" id="ffScroller" tabindex="0" aria-label="Daftar frozen food, geser ke samping" data-i18n-attr="aria-label:ff.list"><!-- rendered --></div>
+      <div class="container ff-controls">
+        <button class="round-btn" data-scroll="-1" aria-label="Geser ke kiri" data-i18n-attr="aria-label:ff.left"><svg viewBox="0 0 24 24"><path d="m15 5-7 7 7 7"/></svg></button>
+        <div class="ff-progress"><span id="ffBar"></span></div>
+        <button class="round-btn" data-scroll="1" aria-label="Geser ke kanan" data-i18n-attr="aria-label:ff.right"><svg viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></svg></button>
+      </div>
+    </section>
+
+    <!-- ============ KUE KERING ============ -->
+    <section class="section cookies" id="kue">
+      <div class="container cookies__grid">
+        <div class="cookies__visual reveal">
+          <div class="polaroid p1"><img src="/src/img/produk/kukis.webp" alt="Aneka kukis Toga Boga dalam toples" width="900" height="1200" loading="lazy"></div>
+          <div class="polaroid p2"><img src="/src/img/produk/kue-kering.webp" alt="Kue kering Toga Boga tersaji di meja" width="900" height="1200" loading="lazy"></div>
+          <button class="catalog-link" data-lightbox="/src/img/produk/katalog-kue.webp" data-caption="Katalog kue kering Toga Boga" data-i18n="ck.catalog" data-i18n-attr="data-caption:ck.catalogCap">Lihat katalog lengkap ↗</button>
+        </div>
+        <div class="cookies__copy">
+          <p class="kicker reveal" data-i18n="ck.kicker">Pricelist Togaboga Cookies 2026</p>
+          <h2 class="h2 reveal" data-i18n="ck.h2">Kue kering <em>rumahan</em>, renyah sampai suapan terakhir.</h2>
+          <p class="reveal" data-i18n="ck.p">Tersedia dalam kemasan <strong>toples poppy 500 ml</strong>. Mau dijadikan hadiah? Ada paket <strong>hampers keranjang anyam cantik (+Rp25.000)</strong>.</p>
+          <ul class="pricelist reveal" id="cookieList"><!-- rendered --></ul>
+          <div class="cookies__cta reveal">
+            <a class="btn btn--green" data-wa="Halo Toga Boga, saya ingin pesan kue kering." data-i18n="ck.cta1" data-i18n-attr="data-wa:wa.cookies" href="#">Pesan Kue Kering</a>
+            <a class="btn btn--outline" data-wa="Halo Toga Boga, saya ingin pesan paket hampers kue kering (keranjang anyam)." data-i18n="ck.cta2" data-i18n-attr="data-wa:wa.hampers" href="#">Pesan Hampers</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ GALERI ============ -->
+    <section class="section gallery" id="galeri">
+      <div class="container">
+        <div class="section-head center">
+          <p class="kicker reveal" data-i18n="gal.kicker">Galeri Kegiatan</p>
+          <h2 class="h2 reveal" data-i18n="gal.h2">Belajar, memasak, dan <em>bertumbuh</em> bersama.</h2>
+        </div>
+
+        <article class="story reveal">
+          <div class="story__media">
+            <button class="story__main" data-lightbox="/src/img/produk/cooking-class.webp" data-caption="Cooking class bersama anak-anak" data-i18n-attr="data-caption:gal.t1"><img src="/src/img/produk/cooking-class.webp" alt="Anak-anak mengikuti cooking class Toga Boga" width="900" height="506" loading="lazy"></button>
+            <div class="story__thumbs">
+              <button data-lightbox="/src/img/galeri/cc-2.webp" data-caption="Memetik bahan pangan dari kebun" data-i18n-attr="data-caption:gal.c2"><img src="/src/img/galeri/cc-2.webp" alt="Anak-anak memetik bahan pangan di kebun" loading="lazy"></button>
+              <button data-lightbox="/src/img/galeri/cc-3.webp" data-caption="Anak-anak mengolah adonan" data-i18n-attr="data-caption:gal.c3"><img src="/src/img/galeri/cc-3.webp" alt="Anak mengolah adonan" loading="lazy"></button>
+              <button data-lightbox="/src/img/galeri/cc-4.webp" data-caption="Hasil masakan cooking class" data-i18n-attr="data-caption:gal.c4"><img src="/src/img/galeri/cc-4.webp" alt="Hasil masakan cooking class" loading="lazy"></button>
+            </div>
+          </div>
+          <div class="story__copy">
+            <span class="story__no">01</span>
+            <h3 data-i18n="gal.t1">Cooking class bersama anak-anak</h3>
+            <p data-i18n="gal.p1">Memetik bahan pangan lokal langsung dari kebun sendiri, kemudian mengolahnya menjadi hidangan lezat. Belajar memasak jadi lebih seru, dekat dengan alam, dan menyenangkan!</p>
+            <a class="link-arrow" data-wa="Halo Toga Boga, saya ingin info jadwal cooking class anak." data-i18n="gal.cta" data-i18n-attr="data-wa:wa.cc" href="#">Daftarkan si kecil</a>
+          </div>
+        </article>
+
+        <article class="story story--rev reveal">
+          <div class="story__media">
+            <button class="story__main" data-lightbox="/src/img/produk/pelatihan-kejuruan.webp" data-caption="BLK Kejuruan Pengolahan Makanan & Minuman" data-i18n-attr="data-caption:gal.t2"><img src="/src/img/produk/pelatihan-kejuruan.webp" alt="Peserta BLK Kejuruan Pengolahan Makanan dan Minuman bersama Toga Boga" width="900" height="506" loading="lazy"></button>
+          </div>
+          <div class="story__copy">
+            <span class="story__no">02</span>
+            <h3 data-i18n="gal.t2">BLK Kejuruan Pengolahan Makanan & Minuman</h3>
+            <p data-i18n="gal.p2">Kegiatan pelatihan hasil kerja sama Toga Boga dengan Disnaker Kota Probolinggo. Peserta tidak hanya dibekali keterampilan mengolah makanan dan minuman, tetapi juga belajar menghitung Harga Pokok Produksi (HPP) dan mengelola usaha sederhana.</p>
+            <span class="pill-badge" data-i18n="gal.badge">Kolaborasi Disnaker Kota Probolinggo</span>
+          </div>
+        </article>
+
+        <article class="story reveal">
+          <div class="story__media">
+            <button class="story__main" data-lightbox="/src/img/produk/pelatihan-disabilitas.webp" data-caption="BLK Disabilitas" data-i18n-attr="data-caption:gal.t3"><img src="/src/img/produk/pelatihan-disabilitas.webp" alt="Peserta BLK Disabilitas bersama tim Toga Boga" width="900" height="506" loading="lazy"></button>
+            <div class="story__thumbs">
+              <button data-lightbox="/src/img/galeri/dis-2.webp" data-caption="Pendampingan peserta BLK Disabilitas" data-i18n-attr="data-caption:gal.c6"><img src="/src/img/galeri/dis-2.webp" alt="Pendampingan peserta" loading="lazy"></button>
+              <button data-lightbox="/src/img/galeri/dis-3.webp" data-caption="Praktik mengolah makanan" data-i18n-attr="data-caption:gal.c7"><img src="/src/img/galeri/dis-3.webp" alt="Praktik mengolah makanan" loading="lazy"></button>
+              <button data-lightbox="/src/img/galeri/dis-4.webp" data-caption="Hasil olahan peserta" data-i18n-attr="data-caption:gal.c8"><img src="/src/img/galeri/dis-4.webp" alt="Hasil olahan kue peserta" loading="lazy"></button>
+            </div>
+          </div>
+          <div class="story__copy">
+            <span class="story__no">03</span>
+            <h3 data-i18n="gal.t3">BLK Disabilitas</h3>
+            <p data-i18n="gal.p2">Kegiatan pelatihan hasil kerja sama Toga Boga dengan Disnaker Kota Probolinggo. Peserta tidak hanya dibekali keterampilan mengolah makanan dan minuman, tetapi juga belajar menghitung Harga Pokok Produksi (HPP) dan mengelola usaha sederhana.</p>
+            <span class="pill-badge" data-i18n="gal.badge">Kolaborasi Disnaker Kota Probolinggo</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ CARA PESAN ============ -->
+    <section class="section steps" id="cara-pesan">
+      <div class="container">
+        <div class="section-head center">
+          <p class="kicker reveal" data-i18n="how.kicker">Cara Pesan</p>
+          <h2 class="h2 reveal" data-i18n="how.h2">Lima langkah, <em>langsung</em> lewat WhatsApp.</h2>
+        </div>
+        <ol class="steps__list">
+          <li class="reveal"><span>1</span><h3 data-i18n="how.t1">Pilih produk</h3><p data-i18n="how.p1">Pilih produk atau layanan yang kamu inginkan.</p></li>
+          <li class="reveal"><span>2</span><h3 data-i18n="how.t2">Klik WhatsApp</h3><p data-i18n="how.p2">Tekan tombol “Pesan” atau “WhatsApp” di kartu produk.</p></li>
+          <li class="reveal"><span>3</span><h3 data-i18n="how.t3">Terhubung</h3><p data-i18n="how.p3">Kamu langsung terhubung ke WhatsApp Toga Boga.</p></li>
+          <li class="reveal"><span>4</span><h3 data-i18n="how.t4">Tanya detail</h3><p data-i18n="how.p4">Tanyakan menu, harga, ketersediaan, dan jadwal.</p></li>
+          <li class="reveal"><span>5</span><h3 data-i18n="how.t5">Pesanan diproses</h3><p data-i18n="how.p5">Pemesanan dilanjutkan dan dikonfirmasi lewat WhatsApp.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="section faq">
+      <div class="container faq__grid">
+        <div class="faq__side reveal">
+          <p class="kicker" data-i18n="faq.kicker">Tanya Jawab</p>
+          <h2 class="h2" data-i18n="faq.h2">Pertanyaan yang <em>sering</em> ditanyakan.</h2>
+          <div class="faq__mascot">
+            <div class="faq__blob" aria-hidden="true"></div>
+            <img src="/src/img/brand/chef-mascot.webp" alt="Maskot koki Toga Boga" width="360" height="360" loading="lazy">
+          </div>
+          <button class="btn btn--green" data-open-chat data-i18n="faq.ask">Tanya Asisten Gizi</button>
+        </div>
+        <div class="faq__list">
+          <details class="reveal" open>
+            <summary data-i18n="faq.q1">Apakah konsultasi menu diet berbayar?</summary>
+            <p data-i18n="faq.a1">Tidak. Konsultasi menu diet di Toga Boga <strong>gratis (Rp0)</strong>. Langsung chat kami lewat WhatsApp, atau coba dulu tanya ke Asisten Gizi di pojok kanan bawah.</p>
+          </details>
+          <details class="reveal">
+            <summary data-i18n="faq.q2">Berapa harga katering diet?</summary>
+            <p data-i18n="faq.a2">Katering diet DASH <strong>Rp18.000</strong>/porsi. Makanan full meal untuk Puskesmas (TETP dan tinggi serat) <strong>Rp15.000</strong>/porsi.</p>
+          </details>
+          <details class="reveal">
+            <summary data-i18n="faq.q3">Bisa pesan tumpeng untuk acara?</summary>
+            <p data-i18n="faq.a3">Bisa. Tersedia tumpeng nasi dan tumpeng puding mulai <strong>Rp125.000 s.d. Rp600.000</strong>, tergantung ukuran dan isian.</p>
+          </details>
+          <details class="reveal">
+            <summary data-i18n="faq.q4">Berapa harga frozen food?</summary>
+            <p data-i18n="faq.a4">Semua varian frozen food <strong>Rp30.000</strong> — dari siomay, otak-otak kakap, karipap, risol, hingga sosis solo.</p>
+          </details>
+          <details class="reveal">
+            <summary data-i18n="faq.q5">Apa itu PMT Bumil & PMT Balita?</summary>
+            <p data-i18n="faq.a5">Paket Pemberian Makanan Tambahan untuk ibu hamil dan balita, dirancang sesuai kebutuhan gizi. Harga <strong>Rp21.500</strong>/paket.</p>
+          </details>
+          <details class="reveal">
+            <summary data-i18n="faq.q6">Berapa biaya cooking class anak?</summary>
+            <p data-i18n="faq.a6">Cooking class anak-anak <strong>Rp35.000 s.d. Rp40.000</strong> per anak. Anak-anak memetik bahan dari kebun lalu memasaknya sendiri.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA ============ -->
+    <section class="cta-band">
+      <div class="container cta-band__inner">
+        <img class="cta-band__logo" src="/src/img/brand/logo-yellow.png" alt="" width="160" height="141" loading="lazy">
+        <div>
+          <h2 data-i18n="cta.h2">Siap makan sehat <em>hari ini?</em></h2>
+          <p data-i18n="cta.p">Ceritakan kebutuhanmu — acara, diet, atau stok frozen food. Kami bantu pilihkan.</p>
+        </div>
+        <a class="btn btn--yellow btn--lg" data-wa="Halo Toga Boga, saya ingin pesan." data-i18n-attr="data-wa:wa.order" href="#">Chat WhatsApp</a>
+      </div>
+    </section>
+
+    <!-- ============ KONTAK ============ -->
+    <section class="section contact" id="kontak">
+      <div class="container contact__grid">
+        <div class="contact__info">
+          <p class="kicker reveal" data-i18n="ct.kicker">Kontak & Lokasi</p>
+          <h2 class="h2 reveal" data-i18n="ct.h2">Mampir ke <em>dapur</em> kami.</h2>
+          <ul class="contact__list reveal">
+            <li>
+              <span class="ci" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
+              <div><b data-i18n="ct.addr">Alamat</b><p>Jl. Krajan Baru, Ketapang, Kec. Kademangan, Kota Probolinggo, Jawa Timur 67222</p></div>
+            </li>
+            <li>
+              <span class="ci" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></span>
+              <div><b>WhatsApp</b><p><a data-wa="Halo Toga Boga" href="#">0852-3606-4585</a></p></div>
+            </li>
+            <li>
+              <span class="ci" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg></span>
+              <div><b>Instagram</b><p><a href="https://instagram.com/toga.boga" target="_blank" rel="noopener">@toga.boga</a></p></div>
+            </li>
+          </ul>
+          <a class="btn btn--outline reveal" href="https://maps.app.goo.gl/mZ6gPap2hUe7yr9X9?g_st=aw" target="_blank" rel="noopener" data-i18n="ct.maps">Buka di Google Maps ↗</a>
+        </div>
+        <div class="map reveal">
+          <iframe title="Lokasi Toga Boga Catering di Google Maps" src="https://www.google.com/maps?q=Toga+Boga+Catering,+65WG%2BWR8,+Ketapang,+Kademangan,+Probolinggo&z=16&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a href="#beranda" class="brand">
+          <img src="/src/img/brand/logo-yellow.png" alt="" width="48" height="42">
+          <span class="wordmark">T<u>o</u>g<u>a</u> B<u>o</u>g<u>a</u></span>
+        </a>
+        <p data-i18n="ft.about">Catering · Healthy and Tasty. Dikelola ahli gizi di Kota Probolinggo sejak 2015.</p>
+      </div>
+      <div>
+        <h3 data-i18n="ft.explore">Jelajahi</h3>
+        <ul><li><a href="#tentang" data-i18n="nav.about">Tentang</a></li><li><a href="#layanan" data-i18n="nav.services">Layanan</a></li><li><a href="#frozen">Frozen Food</a></li><li><a href="#kue" data-i18n="nav.cookies">Kue Kering</a></li><li><a href="#galeri" data-i18n="nav.gallery">Galeri</a></li></ul>
+      </div>
+      <div>
+        <h3 data-i18n="ft.reach">Hubungi</h3>
+        <ul>
+          <li><a data-wa="Halo Toga Boga" href="#">WA 0852-3606-4585</a></li>
+          <li><a href="https://instagram.com/toga.boga" target="_blank" rel="noopener">Instagram @toga.boga</a></li>
+          <li>Jl. Krajan Baru, Ketapang, Kademangan, Kota Probolinggo 67222</li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <p>© <span id="year">2026</span> Toga Boga Catering. <span data-i18n="ft.rights">Semua hak dilindungi.</span></p>
+    </div>
+  </footer>
+
+  <!-- ============ SERVICE MODAL ============ -->
+  <dialog class="modal" id="svcModal" aria-labelledby="svcModalTitle">
+    <div class="modal__inner">
+      <button class="modal__close" data-close aria-label="Tutup">×</button>
+      <div class="modal__media" id="svcModalMedia"></div>
+      <div class="modal__body">
+        <p class="kicker" id="svcModalCat"></p>
+        <h3 id="svcModalTitle"></h3>
+        <p class="modal__price" id="svcModalPrice"></p>
+        <p id="svcModalDesc"></p>
+        <a class="btn btn--green" id="svcModalWa" href="#" target="_blank" rel="noopener" data-i18n="mm.cta">Pesan via WhatsApp</a>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- ============ LIGHTBOX ============ -->
+  <dialog class="lightbox" id="lightbox" aria-label="Foto diperbesar">
+    <button class="modal__close" data-close aria-label="Tutup">×</button>
+    <figure><img id="lbImg" alt=""><figcaption id="lbCap"></figcaption></figure>
+  </dialog>
+
+  <!-- ============ FLOATING: WA + CHAT ============ -->
+  <a class="fab-wa" data-wa="Halo Toga Boga, saya ingin bertanya." data-i18n-attr="data-wa:wa.q" href="#" aria-label="Chat WhatsApp Toga Boga">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 3.5A11 11 0 0 0 3.2 17.3L2 22l4.8-1.2A11 11 0 1 0 20.5 3.5Zm-8.4 17a9 9 0 0 1-4.6-1.3l-.3-.2-2.9.8.8-2.8-.2-.3a9 9 0 1 1 7.2 3.8Zm5-6.7c-.3-.1-1.6-.8-1.9-.9-.3-.1-.4-.1-.6.1l-.9 1.1c-.2.2-.3.2-.6.1a7.4 7.4 0 0 1-3.6-3.2c-.3-.5.3-.4.8-1.4.1-.2 0-.3 0-.5l-.9-2c-.2-.6-.5-.5-.6-.5h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7.5-.1 1.6-.7 1.9-1.3.2-.6.2-1.2.2-1.3-.1-.1-.3-.2-.6-.3Z"/></svg>
+  </a>
+
+  <button class="fab-chat" id="chatFab" aria-label="Buka Asisten Gizi Toga Boga" data-i18n-attr="aria-label:chat.open" aria-expanded="false" aria-controls="chatPanel">
+    <img src="/src/img/brand/mascot-face.webp" alt="" width="64" height="64">
+    <span class="fab-chat__bubble" data-i18n="chat.bubble">Tanya gizi? 👋</span>
+    <span class="fab-chat__ping" aria-hidden="true"></span>
+  </button>
+
+  <section class="chat" id="chatPanel" role="dialog" aria-label="Asisten Gizi Toga Boga" data-i18n-attr="aria-label:chat.name" hidden>
+    <header class="chat__head">
+      <img src="/src/img/brand/mascot-face.webp" alt="" width="44" height="44">
+      <div>
+        <b data-i18n="chat.name">Asisten Gizi Toga Boga</b>
+        <span data-i18n="chat.status"><i class="online"></i> Online · dijawab otomatis oleh AI</span>
+      </div>
+      <button class="chat__close" id="chatClose" aria-label="Tutup chat" data-i18n-attr="aria-label:chat.close">×</button>
+    </header>
+    <div class="chat__body" id="chatBody" aria-live="polite"></div>
+    <div class="chat__chips" id="chatChips" data-i18n="chat.chips">
+      <button>Menu diet untuk hipertensi?</button>
+      <button>Rekomendasi menu untuk acara ulang tahun</button>
+      <button>Frozen food apa saja?</button>
+      <button>Kue kering yang masih ready?</button>
+    </div>
+    <form class="chat__form" id="chatForm">
+      <textarea id="chatInput" rows="1" maxlength="800" placeholder="Tulis pertanyaanmu…" aria-label="Pesan" data-i18n-attr="placeholder:chat.ph;aria-label:chat.msg"></textarea>
+      <button type="submit" id="chatSend" aria-label="Kirim" data-i18n-attr="aria-label:chat.send"><svg viewBox="0 0 24 24"><path d="M4 12 20 4l-6 16-3-7-7-1Z"/></svg></button>
+    </form>
+    <p class="chat__foot" data-i18n="chat.foot">Info gizi bersifat umum, bukan pengganti diagnosis medis. Pesanan lewat <a data-wa="Halo Toga Boga, saya ingin pesan." href="#">WhatsApp</a>.</p>
+  </section>
+
+  <div class="ios-hint" id="iosHint" hidden>
+    <p data-i18n="ios">Pasang <b>Toga Boga</b> di HP: ketuk <b>Bagikan</b> <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M8 7l4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7"/></svg> lalu <b>Tambah ke Layar Utama</b>.</p>
+    <button aria-label="Tutup" id="iosHintClose">×</button>
+  </div>
+
+  <script src="/src/js/i18n.js" defer></script>
+  <script src="/src/js/main.js" defer></script>
+  <script src="/src/js/chat.js" defer></script>
+</body>
+</html>
