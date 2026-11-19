@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /api/
 
-Sitemap: https://tobie.web.id/sitemap.xml
+Sitemap: https://www.tobie.web.id/sitemap.xml
