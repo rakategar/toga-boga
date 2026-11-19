@@ -1,4 +1,4 @@
-/* Toga Boga — Asisten Gizi (DeepSeek via /api/chat) */
+/* Toga Boga: Asisten Gizi (DeepSeek via /api/chat) */
 (() => {
   const $ = (s) => document.querySelector(s);
   const fab = $('#chatFab');
@@ -26,6 +26,7 @@
 
   const save = () => { try { sessionStorage.setItem(STORE, JSON.stringify(history.slice(-20))); } catch {} };
 
+  const noDash = (s) => s.replace(/\s*—\s*/g, ', ');
   const esc = (s) => s.replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   const inline = (s) => esc(s)
     .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
@@ -91,10 +92,12 @@
         <div class="rec__body">
           <span class="rec__cat">${esc(it.cat)}</span>
           <b class="rec__name">${esc(it.name)}</b>
-          <a class="rec__wa" href="${waOrder(it)}" target="_blank" rel="noopener">${waIcon}${it.sold ? tr('Tanya stok', 'Ask stock') : tr('Pesan via WA', 'Order via WA')}</a>
+          ${it.form
+            ? `<a class="rec__wa rec__wa--form" href="${it.form}" target="_blank" rel="noopener">${tr('Daftar sekarang', 'Register now')} →</a>`
+            : `<a class="rec__wa" href="${waOrder(it)}" target="_blank" rel="noopener">${waIcon}${it.sold ? tr('Tanya stok', 'Ask stock') : tr('Pesan via WA', 'Order via WA')}</a>`}
         </div>
       </article>`).join('')}</div>`;
-    const ready = items.filter((it) => !it.sold);
+    const ready = items.filter((it) => !it.sold && !it.form);
     if (ready.length > 1) {
       const all = document.createElement('a');
       all.className = 'recs__all';
@@ -128,7 +131,7 @@
   /* Balasan asisten: teks + kartu, atau tombol WA bila tidak ada kartu. */
   const finish = (el, reply) => {
     const { clean, ids } = split(reply);
-    el.innerHTML = md(clean);
+    el.innerHTML = md(noDash(clean));
     if (!cards(ids, el)) addWa(el, clean);
   };
 
@@ -194,7 +197,7 @@
         if (done) break;
         reply += dec.decode(value, { stream: true });
         const { clean } = split(reply);
-        if (clean) bot.innerHTML = md(clean);
+        if (clean) bot.innerHTML = md(noDash(clean));
         body.scrollTop = body.scrollHeight;
       }
       if (!reply.trim()) throw new Error(tr('Maaf, belum ada jawaban. Coba ulangi pertanyaanmu.', 'Sorry, no answer yet. Please try asking again.'));

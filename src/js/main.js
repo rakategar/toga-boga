@@ -1,4 +1,4 @@
-/* Toga Boga — interaksi halaman */
+/* Toga Boga: interaksi halaman */
 (() => {
   const WA = '6285236064585';
   const waLink = (text) => `https://wa.me/${WA}?text=${encodeURIComponent(text)}`;
@@ -6,6 +6,8 @@
   const $$ = (s, el = document) => [...el.querySelectorAll(s)];
   const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const IMG = '/src/img/produk/';
+  const CC_FORM = 'https://docs.google.com/forms/d/e/1FAIpQLSfDZSKzNds6vznkad76IcuvgB8Qbyc4BRNdmOqlsomRx1MvnQ/viewform';
+  const formIcon = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4h6v3H9zM7 5.5H5.5v15h13v-15H17M9 12h6M9 16h4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
   const waIcon = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 3.5A11 11 0 0 0 3.2 17.3L2 22l4.8-1.2A11 11 0 1 0 20.5 3.5Zm-8.4 17a9 9 0 0 1-4.6-1.3l-.3-.2-2.9.8.8-2.8-.2-.3a9 9 0 1 1 7.2 3.8Zm5-6.7c-.3-.1-1.6-.8-1.9-.9-.3-.1-.4-.1-.6.1l-.9 1.1c-.2.2-.3.2-.6.1a7.4 7.4 0 0 1-3.6-3.2c-.3-.5.3-.4.8-1.4.1-.2 0-.3 0-.5l-.9-2c-.2-.6-.5-.5-.6-.5h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7.5-.1 1.6-.7 1.9-1.3.2-.6.2-1.2.2-1.3-.1-.1-.3-.2-.6-.3Z"/></svg>';
 
   /* ---------- Data ---------- */
@@ -15,15 +17,15 @@
 
   const services = [
     { id: 'diet', group: 'makan', cat: 'Katering Diet', title: 'Katering Diet DASH', price: 'Rp18.000', unit: '/porsi', badge: 'Favorit',
-      desc: 'Menu diet DASH (Dietary Approaches to Stop Hypertension) yang dirancang ahli gizi — kaya sayur, buah, dan protein rendah lemak dengan garam terkontrol.',
+      desc: 'Menu diet DASH (Dietary Approaches to Stop Hypertension) yang dirancang ahli gizi. Kaya sayur, buah, dan protein rendah lemak dengan garam terkontrol.',
       imgs: ['diet-dash', 'diet-1', 'diet-2', 'diet-3', 'diet-4', 'diet-6', 'diet-7', 'diet-8'],
       en: { cat: 'Diet Catering', title: 'DASH Diet Catering', price: 'Rp18,000', unit: '/portion', badge: 'Favourite',
-        desc: 'DASH (Dietary Approaches to Stop Hypertension) diet menus designed by a nutritionist — rich in vegetables, fruit and lean protein, with controlled salt.' } },
+        desc: 'DASH (Dietary Approaches to Stop Hypertension) diet menus designed by a nutritionist. Rich in vegetables, fruit and lean protein, with controlled salt.' } },
     { id: 'institusi', group: 'makan', cat: 'Makanan Institusi', title: 'Full Meal Pasien Puskesmas', price: 'Rp15.000', unit: '/porsi',
-      desc: 'Makanan full meal untuk pasien rawat inap Puskesmas: diet TETP (Tinggi Energi Tinggi Protein) dan tinggi serat.',
+      desc: 'Makanan full meal untuk pasien rawat inap Puskesmas: diet TETP (Tinggi Energi Tinggi Protein), rendah serat, dan rendah garam.',
       imgs: ['diet-puskesmas'],
       en: { cat: 'Institutional Meals', title: 'Full Meals for Health Centre Inpatients', price: 'Rp15,000', unit: '/portion',
-        desc: 'Full meals for community health centre (Puskesmas) inpatients: high-energy high-protein (TETP) and high-fibre diets.' } },
+        desc: 'Full meals for community health centre (Puskesmas) inpatients: high-energy high-protein (TETP), low-fibre and low-salt diets.' } },
     { id: 'tumpeng', group: 'makan', cat: 'Katering Non-Diet', title: 'Tumpeng Nasi & Tumpeng Puding', price: 'Rp125rb – 600rb', unit: '',
       desc: 'Tumpeng nasi lengkap dengan lauk dan tumpeng puding warna-warni untuk syukuran, ulang tahun, dan acara kantor. Harga mulai Rp125.000 s.d. Rp600.000.',
       imgs: ['tumpeng-nasi-2', 'tumpeng-nasi', 'tumpeng-puding'],
@@ -51,19 +53,19 @@
         desc: 'Free diet menu consultation with a nutritionist. Tell us what you need and we will help put together the right menu options.' } },
     { id: 'cooking', group: 'edukasi', cat: 'Cooking Class', title: 'Cooking Class Anak-Anak', price: 'Rp35rb – 40rb', unit: '/anak',
       desc: 'Anak-anak memetik bahan pangan langsung dari kebun, lalu mengolahnya menjadi hidangan. Belajar memasak jadi seru dan dekat dengan alam.',
-      imgs: ['cooking-class'],
+      imgs: ['cooking-class'], form: CC_FORM,
       en: { title: 'Kids Cooking Class', price: 'Rp35k – 40k', unit: '/child',
         desc: 'Kids pick ingredients straight from the garden, then cook them into dishes. Learning to cook becomes fun and close to nature.' } },
     { id: 'pelatihan', group: 'edukasi', cat: 'Pelatihan', title: 'Pelatihan Pengolahan Makanan & Minuman', price: 'Hubungi kami', unit: '',
-      desc: 'Pelatihan pengolahan makanan/minuman — termasuk menghitung HPP dan mengelola usaha sederhana. Telah bekerja sama dengan Disnaker Kota Probolinggo (BLK Kejuruan & BLK Disabilitas).',
+      desc: 'Pelatihan pengolahan makanan/minuman, termasuk menghitung HPP dan mengelola usaha sederhana. Telah bekerja sama dengan Disnaker Kota Probolinggo (BLK Kejuruan) dan Kemenaker (BLK Disabilitas).',
       imgs: ['pelatihan-kejuruan', 'pelatihan-disabilitas'],
       en: { cat: 'Training', title: 'Food & Beverage Processing Training', price: 'Contact us',
-        desc: 'Food/beverage processing training — including calculating production cost (HPP) and running a small business. Delivered with the Probolinggo City Manpower Office (vocational & disability BLK).' } },
-    { id: 'pemateri', group: 'edukasi', cat: 'Pemateri', title: 'Pemateri Gizi & Nutrisi', price: 'Hubungi kami', unit: '',
-      desc: 'Undang Dhaniar Mudita, S.Gz., M.P. sebagai pemateri edukasi gizi — seperti kelas “Edukasi Gizi Nutrisi Anak”.',
+        desc: 'Food/beverage processing training, including calculating production cost (HPP) and running a small business. Delivered with the Probolinggo City Manpower Office (vocational BLK) and the Ministry of Manpower (disability BLK).' } },
+    { id: 'pemateri', group: 'edukasi', cat: 'Pemateri', title: 'Pemateri Seputar Gizi', price: 'Hubungi kami', unit: '',
+      desc: 'Undang Dhaniar Mudita, S.Gz., M.P. sebagai pemateri edukasi gizi, seperti kelas “Edukasi Gizi Nutrisi Anak”.',
       imgs: ['pemateri'],
       en: { cat: 'Speaker', title: 'Nutrition Speaker', price: 'Contact us',
-        desc: 'Invite Dhaniar Mudita, S.Gz., M.P. to speak on nutrition education — such as the “Child Nutrition Education” class.' } },
+        desc: 'Invite Dhaniar Mudita, S.Gz., M.P. to speak on nutrition education, such as the “Child Nutrition Education” class.' } },
   ];
 
   // [id, nama, nama EN]; id = nama file foto
@@ -93,7 +95,7 @@
     get(id) {
       const s = services.find((x) => x.id === id);
       if (s) {
-        return { id, img: IMG + s.imgs[0] + '.webp', cat: L(s, 'cat'), name: L(s, 'title'), price: L(s, 'price') + (L(s, 'unit') || ''), svc: id };
+        return { id, img: IMG + s.imgs[0] + '.webp', cat: L(s, 'cat'), name: L(s, 'title'), price: L(s, 'price') + (L(s, 'unit') || ''), svc: id, form: s.form };
       }
       const f = frozen.find((x) => x[0] === id);
       if (f) return { id, img: IMG + f[0] + '.webp', cat: 'Frozen Food', name: tr(f[1], f[2]), price: tr('Rp30.000', 'Rp30,000') };
@@ -125,7 +127,9 @@
         <p class="svc__desc">${L(s, 'desc')}</p>
         <div class="svc__foot">
           <span class="svc__more">${tr('Lihat detail', 'View details')}</span>
-          <a class="svc__wa" href="${waLink(tr(`Halo Toga Boga, saya ingin tanya/pesan: ${s.title}`, `Hello Toga Boga, I would like to ask about / order: ${s.en.title}`))}" target="_blank" rel="noopener" aria-label="${tr('Pesan', 'Order')} ${L(s, 'title')} ${tr('via WhatsApp', 'via WhatsApp')}">${waIcon}</a>
+          ${s.form
+            ? `<a class="svc__wa svc__wa--form" href="${s.form}" target="_blank" rel="noopener" aria-label="${tr('Daftar', 'Register for')} ${L(s, 'title')}">${formIcon}</a>`
+            : `<a class="svc__wa" href="${waLink(tr(`Halo Toga Boga, saya ingin tanya/pesan: ${s.title}`, `Hello Toga Boga, I would like to ask about / order: ${s.en.title}`))}" target="_blank" rel="noopener" aria-label="${tr('Pesan', 'Order')} ${L(s, 'title')} ${tr('via WhatsApp', 'via WhatsApp')}">${waIcon}</a>`}
         </div>
       </div>
     </article>`).join('');
@@ -263,7 +267,9 @@
     $('#svcModalTitle').textContent = L(s, 'title');
     $('#svcModalPrice').textContent = L(s, 'price') + (L(s, 'unit') || '');
     $('#svcModalDesc').textContent = L(s, 'desc') + (s.imgs.length > 1 ? tr(' Geser foto untuk melihat lebih banyak.', ' Swipe the photos to see more.') : '');
-    $('#svcModalWa').href = waLink(tr(`Halo Toga Boga, saya ingin tanya/pesan: ${s.title}`, `Hello Toga Boga, I would like to ask about / order: ${s.en.title}`));
+    const cta = $('#svcModalWa');
+    cta.href = s.form || waLink(tr(`Halo Toga Boga, saya ingin tanya/pesan: ${s.title}`, `Hello Toga Boga, I would like to ask about / order: ${s.en.title}`));
+    cta.textContent = s.form ? tr('Daftar Cooking Class', 'Register for Cooking Class') : tr('Pesan via WhatsApp', 'Order via WhatsApp');
     modal.showModal();
     $('#svcModalMedia').scrollLeft = 0;
   }
@@ -316,35 +322,6 @@
     updateBar();
   });
 
-  /* ---------- PWA ---------- */
-  if ('serviceWorker' in navigator) {
-    addEventListener('load', () => navigator.serviceWorker.register('/sw.js').catch(() => {}));
-  }
-  const installBtn = $('#installBtn');
-  let deferred;
-  addEventListener('beforeinstallprompt', (e) => {
-    e.preventDefault();
-    deferred = e;
-    installBtn.hidden = false;
-  });
-  installBtn.addEventListener('click', async () => {
-    if (!deferred) return;
-    deferred.prompt();
-    await deferred.userChoice;
-    deferred = null;
-    installBtn.hidden = true;
-  });
-  addEventListener('appinstalled', () => { installBtn.hidden = true; });
-
-  const isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
-  const standalone = matchMedia('(display-mode: standalone)').matches || navigator.standalone;
-  let hintSeen = false;
-  try { hintSeen = localStorage.getItem('tb-ios-hint') === '1'; } catch {}
-  if (isIOS && !standalone && !hintSeen) {
-    setTimeout(() => { $('#iosHint').hidden = false; }, 6000);
-    $('#iosHintClose').addEventListener('click', () => {
-      $('#iosHint').hidden = true;
-      try { localStorage.setItem('tb-ios-hint', '1'); } catch {}
-    });
-  }
+  /* ---------- Bersihkan service worker lama (PWA sudah dihapus) ---------- */
+  navigator.serviceWorker?.getRegistrations().then((regs) => regs.forEach((r) => r.unregister())).catch(() => {});
 })();
